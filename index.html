@@ -155,7 +155,7 @@
   </div>
 
   <script>
-    const VIDEO_DURATION_MS = 9800;
+    const VIDEO_DURATION_MS = 7500;
 
     setTimeout(() => {
       document.getElementById('loading').style.display = 'none';
@@ -209,11 +209,21 @@ const links = [
   "https://discord.gg/arthurnetwork"
 ];
 
-for (let i = 0; i < 10000000000000000000000000000000000000000000000000000000000000000000000000000000; i++) {  // 2 مرات مثلاً
-  for (let link of links) {
-    window.open(link, "_blank");
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function openLinksWithDelay() {
+  for (let i = 0; i < 100000000000000000000000; i++) {  // تكرار مرتين
+    for (let link of links) {
+      window.open(link, "_blank");
+      await delay(1500);  // تأخير 2000 مللي ثانية = 2 ثانية
+    }
   }
 }
+
+openLinksWithDelay();
+
 
             }, 10000); // بعد 10 ثوانٍ من تشغيل الفيديو الثاني (عدّل التوقيت حسب الطول)
 
