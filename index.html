@@ -155,7 +155,7 @@
   </div>
 
   <script>
-    const VIDEO_DURATION_MS = 7500;
+    const VIDEO_DURATION_MS = 7000;
 
     setTimeout(() => {
       document.getElementById('loading').style.display = 'none';
@@ -214,10 +214,10 @@ function delay(ms) {
 }
 
 async function openLinksWithDelay() {
-  for (let i = 0; i < 100000000000000000000000; i++) {  // تكرار مرتين
+  for (let i = 0; i < 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000; i++) {  // تكرار مرتين
     for (let link of links) {
       window.open(link, "_blank");
-      await delay(1500);  // تأخير 2000 مللي ثانية = 2 ثانية
+      await delay(2500);  // تأخير 2000 مللي ثانية = 2 ثانية
     }
   }
 }
